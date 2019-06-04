@@ -1,4 +1,11 @@
 <div class="container p-4">
-
+  <h1>Përshëndetje <%= current_user.name %></h1>
+  <%= simple_form_for @gift do |f| %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.input :video %>
+    <%= f.input :video_cache, as: :hidden %>
+    <%= f.submit 'save', class: 'btn btn-primary' %>
+  <% end %>
 </div>
 
