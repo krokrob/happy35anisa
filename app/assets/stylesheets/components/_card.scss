@@ -1,11 +1,15 @@
 .card-white {
   background-color: white;
   border-radius: 3px;
-  margin-left: 200px;
-  padding: 50px;
+  color: $gray;
+  padding: 20px;
+  &.card-xl {
+    padding: 50px;
+  }
 }
 .card {
   position: relative;
+  color: $gray;
 }
 .card-image {
   position: relative;
@@ -19,6 +23,7 @@
 }
 .card-video-icon i {
   font-size: 32px;
+  color: white;
   display: none;
 }
 .card:hover .card-image .card-video-icon i {

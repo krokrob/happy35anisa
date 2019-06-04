@@ -1,20 +1,24 @@
 <%= link_to 'logout', destroy_user_session_path(resource), method: :delete %>
-<div class="d-flex align-items-center" id="home">
-  <div class="card-white">
-    <h2>Hello Anisa</h2>
+<div id="home">
+  <div class="container">
+    <div class="d-flex align-items-center" style="height: 100vh;">
+      <div class="card-white card-xl">
+        <h2>Hello Anisa!</h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.input :email, autofocus: true, autocomplete: "email" %>
-      </div>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.input :email, autofocus: true, autocomplete: "email" %>
+          </div>
 
-      <div class="field">
-        <%= f.input :password, autocomplete: "current-password" %>
-      </div>
+          <div class="field">
+            <%= f.input :password, autocomplete: "current-password" %>
+          </div>
 
-      <div class="actions">
-        <%= f.submit "Log in", class: 'btn btn-primary' %>
+          <div class="actions">
+            <%= f.submit "Log in", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
