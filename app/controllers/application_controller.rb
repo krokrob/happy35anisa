@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
     if current_user.email == 'anisa.caja@yahoo.com'
       gifts_path
     else
-      stored_location_for(resource) || root_path
+      new_gift_path
     end
   end
 end

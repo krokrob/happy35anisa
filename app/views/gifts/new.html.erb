@@ -1,11 +1,16 @@
 <div class="container p-4">
-  <h1>Përshëndetje <%= current_user.name %></h1>
-  <%= simple_form_for @gift do |f| %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.input :video %>
-    <%= f.input :video_cache, as: :hidden %>
-    <%= f.submit 'save', class: 'btn btn-primary' %>
-  <% end %>
+  <h1>Përshëndetje <%= current_user.name %>!</h1>
+  <div class="pt-4">
+    <%= simple_form_for @gift do |f| %>
+      <%= f.input :photo, label: 'Ngarkoni një foto prej jush:' %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.input :video, label: 'Ngarkoni një video për ditëlindjen e Anise:' %>
+      <%= f.input :video_cache, as: :hidden %>
+      <%= f.input :comment, label: 'Ju gjithashtu mund të lini një mesazh të saj:' %>
+      <div class="d-flex justify-content-center">
+        <%= f.submit 'Dërgoj', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
 </div>
 

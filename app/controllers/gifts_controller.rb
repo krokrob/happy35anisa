@@ -22,4 +22,10 @@ class GiftsController < ApplicationController
   def index
     @gifts = policy_scope(Gift)
   end
+
+  private
+
+  def gift_params
+    params.require(:gift).permit(:photo, :video, :comment)
+  end
 end
