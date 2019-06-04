@@ -1,3 +1,4 @@
+<%= link_to 'logout', destroy_user_session_path(resource), method: :delete %>
 <div class="d-flex align-items-center" id="home">
   <div class="card-white">
     <h2>Log in</h2>
@@ -11,17 +12,9 @@
         <%= f.input :password, autocomplete: "current-password" %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
-        <div class="field">
-          <%= f.input :remember_me, as: :boolean %>
-        </div>
-      <% end %>
-
       <div class="actions">
         <%= f.submit "Log in", class: 'btn btn-primary' %>
       </div>
     <% end %>
-
-    <%= render "devise/shared/links" %>
   </div>
 </div>
