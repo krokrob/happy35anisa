@@ -1,6 +1,4 @@
 class GiftsController < ApplicationController
-  after_action :verify_authorized
-
   def new
     @gift = Gift.new
     authorize @gift

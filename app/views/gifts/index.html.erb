@@ -1,2 +1,18 @@
-<h1>Gifts#index</h1>
-<p>Find me in app/views/gifts/index.html.erb</p>
+<div class="d-flex justify-content-center align-items-center flex-wrap cards-list">
+  <% @gifts.each do |gift| %>
+    <div class="card">
+      <div class="card-image">
+        <%= cl_image_tag gift.photo.url(:bright_face) %>
+        <div class="card-video-icon d-flex align-items-center justify-content-center">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+      <%# if @gift.comment.present? %>
+        <!-- <div class='text-center bg-white p-2'>
+          <%#= @gift.comment %>
+        </div> -->
+      <%# end %>
+      <%= link_to '', gift.video_url, target: :blank, class: 'card-link' %>
+    </div>
+  <% end %>
+</div>

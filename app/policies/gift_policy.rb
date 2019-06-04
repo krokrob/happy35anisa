@@ -1,7 +1,7 @@
 class GiftPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      if user.email == 'anisa.caja@yahoo.com'
+      if user.email == 'anisa.caja@yahoo.com' || user.admin?
         scope.all
       else
         []
@@ -10,7 +10,7 @@ class GiftPolicy < ApplicationPolicy
   end
 
   def new?
-    user.gifts.empty?
+    true
   end
 
   def create?
@@ -18,6 +18,6 @@ class GiftPolicy < ApplicationPolicy
   end
 
   def show?
-    record.user == user
+    record.user == user || user.admin?
   end
 end
