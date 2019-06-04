@@ -11,6 +11,7 @@ class GiftsController < ApplicationController
     @gift.user = current_user
     authorize @gift
     @gift.save
+    flash[:notice] = 'Faleminderit për Anisën!'
     redirect_to gift_path(@gift)
   end
 
