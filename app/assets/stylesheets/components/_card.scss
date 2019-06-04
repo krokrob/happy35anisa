@@ -4,3 +4,26 @@
   margin-left: 200px;
   padding: 50px;
 }
+.card {
+  position: relative;
+}
+.card-image {
+  position: relative;
+}
+.card-link, .card-video-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.card-video-icon i {
+  font-size: 32px;
+  display: none;
+}
+.card:hover .card-image .card-video-icon i {
+  display: block;
+}
+.card:hover {
+  opacity: 0.5;
+}
