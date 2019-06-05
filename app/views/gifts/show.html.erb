@@ -1,7 +1,7 @@
 <div class="container p-4">
   <h2 class='text-center'>Këtu është dhurata juaj Anisës</h2>
   <p class='text-center'>Mund të rri pezull foton për të filluar videon</p>
-  <div class="d-flex justify-content-center pt-4">
+  <div class="d-flex justify-content-center py-4">
     <div class="card">
       <div class="card-image">
         <%= cl_image_tag @gift.photo.url(:bright_face) %>
@@ -17,4 +17,5 @@
       <%= link_to '', @gift.video_url, target: :blank, class: 'card-link' %>
     </div>
   </div>
+  <%= link_to 'Delete this video', gift_path(@gift), method: :delete, class: 'btn btn-sm btn-secondary' %>
 </div>

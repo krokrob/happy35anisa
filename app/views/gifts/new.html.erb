@@ -1,6 +1,6 @@
 <div class="container p-4">
   <h1>Përshëndetje <%= current_user.name %>!</h1>
-  <div class="pt-4">
+  <div class="py-4">
     <div class="card-white">
       <%= simple_form_for @gift do |f| %>
         <%= f.input :photo, label: 'Ngarkoni një foto prej jush:' %>
@@ -14,5 +14,6 @@
       <% end %>
     </div>
   </div>
+  <%= link_to 'See mine', mine_gifts_path, class: 'btn btn-sm btn-secondary' %>
 </div>
 

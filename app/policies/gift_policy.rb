@@ -17,7 +17,15 @@ class GiftPolicy < ApplicationPolicy
     new?
   end
 
+  def mine?
+    new?
+  end
+
   def show?
     record.user == user || user.admin?
+  end
+
+  def destroy?
+    show?
   end
 end

@@ -22,6 +22,18 @@ class GiftsController < ApplicationController
     @gifts = policy_scope(Gift)
   end
 
+  def mine
+    @gifts = current_user.gifts
+    authorize Gift
+  end
+
+  def destroy
+    @gift = Gift.find(params[:id])
+    authorize @gift
+    @gift.destroy
+    redirect_to mine_gifts_path
+  end
+
   private
 
   def gift_params
