@@ -2,7 +2,7 @@
   <% @gifts.each do |gift| %>
     <div class="card" data-toggle="tooltip" title="<%= gift.comment.presence || 'Gezuar!' %>">
       <div class="card-image">
-        <%= cl_image_tag gift.photo.url(:bright_face) %>
+        <%= cl_image_tag gift.photo.url(:faces) %>
         <div class="card-video-icon d-flex align-items-center justify-content-center">
           <i class="fas fa-play"></i>
         </div>
