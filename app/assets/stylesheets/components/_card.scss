@@ -13,6 +13,10 @@
 }
 .card-image {
   position: relative;
+  img {
+    width: 200px;
+    height: 200px;
+  }
 }
 .card-link, .card-video-icon {
   position: absolute;
