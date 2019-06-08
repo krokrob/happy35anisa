@@ -1,0 +1,16 @@
+{
+  "background_color": "deepskyblue",
+  "description": "Happy35anisa will probably make Anisa cry for her 35th birthday but her tears will be made of joy.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "<%= image_path 'icons/android-icon-36x36.png' %>",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Happy35anisa",
+  "short_name": "Happy35anisa",
+  "start_url": "/",
+  "orientation": "landscape"
+}
